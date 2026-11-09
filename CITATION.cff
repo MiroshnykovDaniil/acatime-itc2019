@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite it using the metadata below."
+title: "AcaTime ITC 2019 reproducibility artifact"
+abstract: >-
+  Code, data provenance, certified solutions and scorer outputs for the
+  AcaTime genetic algorithm on the student-free, competition-reduced DTU
+  instances of ITC 2019.
+type: software
+version: 0.1.0
+date-released: 2026-11-09
+license: Apache-2.0
+repository-code: "https://github.com/damiilmiroshynkov/acatime-itc2019"
+url: "https://github.com/damiilmiroshynkov/acatime-itc2019"
+keywords:
+  - university course timetabling
+  - ITC 2019
+  - genetic algorithm
+  - AcaTime
+  - reproducibility
+authors:
+  - family-names: Miroshnykov
+    given-names: Daniil
+    affiliation: "Taras Shevchenko National University of Kyiv, Faculty of Computer Science and Cybernetics"
+    email: daniilmiroshnykov@knu.ua

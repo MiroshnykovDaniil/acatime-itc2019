@@ -1,0 +1,38 @@
+# Build output
+bin/
+obj/
+Debug/
+Release/
+*.user
+*.suo
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# IDE / OS
+.vs/
+.idea/
+.DS_Store
+
+# Secrets and local configuration
+.env
+.env.*
+appsettings.*.local.json
+secrets/
+*.pfx
+*.pem
+*.key
+
+# Local run artifacts and temporary files
+tmp/
+scratch/
+*.tmp
+*.log
+
+# Downloaded benchmark data (fetch with data/download.sh; checksums are committed)
+data/*.xml

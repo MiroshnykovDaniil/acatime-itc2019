@@ -1,0 +1,24 @@
+{
+  "title": "AcaTime ITC 2019 reproducibility artifact",
+  "description": "Code, data provenance, certified solutions and scorer outputs for the AcaTime genetic algorithm on the student-free, competition-reduced DTU instances of ITC 2019. The manuscript is not included in this record.",
+  "creators": [
+    {
+      "name": "Miroshnykov, Daniil",
+      "affiliation": "Taras Shevchenko National University of Kyiv, Faculty of Computer Science and Cybernetics"
+    }
+  ],
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "Apache-2.0",
+  "version": "0.1.0",
+  "publication_date": "2026-11-09",
+  "language": "eng",
+  "keywords": [
+    "university course timetabling",
+    "ITC 2019",
+    "genetic algorithm",
+    "AcaTime",
+    "reproducibility"
+  ],
+  "notes": "Initial scaffold. Code and curated result files are being imported. The manuscript is intentionally not included; its citation and DOI will be added after submission."
+}

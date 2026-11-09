@@ -1,0 +1,13 @@
+claim_id,instance,claim,value,budget,status,artifact_path,command,expected
+tg-fal17-chained,tg-fal17,best certified chained,6889,600+300 s,planned,results/tg-fal17/chained/solution.xml,TBD,6889
+tg-fal17-ind-a,tg-fal17,independent run A,6919,600 s,planned,results/tg-fal17/independent-a/solution.xml,TBD,6919
+tg-fal17-ind-b,tg-fal17,independent run B,6930,600 s,planned,results/tg-fal17/independent-b/solution.xml,TBD,6930
+tg-fal17-best-300,tg-fal17,best 300 s,7042,300 s,planned,results/tg-fal17/best-300/solution.xml,TBD,7042
+tg-fal17-median-300,tg-fal17,median 300 s,7325,300 s,planned,results/tg-fal17/summary.csv,TBD,7325
+tg-spr18-certified,tg-spr18,certified GA result,22180,600 s + roomopt,planned,results/tg-spr18/solution.xml,TBD,22180
+lums-fal17-seed,lums-fal17,certified seed,1602,local search seed,planned,results/lums-fal17/solution.xml,TBD,1602
+lums-spr18-seed,lums-spr18,certified seed,826,local search seed,planned,results/lums-spr18/solution.xml,TBD,826
+tg-fal17-exact-ablation,tg-fal17,exact one-room-per-class ablation,7053/7220,600 s,planned,results/tg-fal17/exact-room-ablation/summary.csv,TBD,7053/7220
+tg-fal17-initial-lns,tg-fal17,initial LNS solution,7800,local search,planned,results/tg-fal17/initial-lns/solution.xml,TBD,7800
+tg-fal17-old-7310,tg-fal17,superseded non-room-aware + repair,7310,best-of-312 repair,planned,results/negative/tg-fal17-old-7310/README.md,TBD,7310
+iku-fal17-negative,iku-fal17,room collisions,70,time-feasible,planned,results/negative/iku-fal17/README.md,TBD,70
