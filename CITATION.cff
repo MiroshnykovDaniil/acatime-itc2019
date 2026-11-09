@@ -9,8 +9,8 @@ type: software
 version: 0.1.0
 date-released: 2026-11-09
 license: Apache-2.0
-repository-code: "https://github.com/damiilmiroshynkov/acatime-itc2019"
-url: "https://github.com/damiilmiroshynkov/acatime-itc2019"
+repository-code: "https://github.com/MiroshnykovDaniil/acatime-itc2019"
+url: "https://github.com/MiroshnykovDaniil/acatime-itc2019"
 keywords:
   - university course timetabling
   - ITC 2019

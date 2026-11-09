@@ -20,5 +20,12 @@
     "AcaTime",
     "reproducibility"
   ],
-  "notes": "Initial scaffold. Code and curated result files are being imported. The manuscript is intentionally not included; its citation and DOI will be added after submission."
+  "notes": "Code, data provenance and curated certified results are included. The manuscript is intentionally not included; its citation and DOI will be added after submission.",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/MiroshnykovDaniil/acatime-itc2019",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
 }
