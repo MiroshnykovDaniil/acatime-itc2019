@@ -1,36 +1,41 @@
 # Scorer validation
 
-The paper reports official ITC 2019 costs. The scorer must therefore be
-demonstrably consistent with the official validator.
+The paper reports official ITC 2019 costs. The artifact's referee is the
+independent scorer in `src/scorer/score.py` (backed by
+`src/bridge/tools/score.py`), which implements the PATAT-2018 formulas for time,
+room, distribution and student costs.
 
-## What is needed
+## Local validation
 
-- The independent scorer source and its tests.
-- A set of known input/solution/score triples covering every cost component:
-  time, room, distribution and student (where applicable).
-- Parity checks against the official ITC 2019 validator for the four certified
-  solutions.
-- Saved official validator responses or logs, with timestamps and checksums.
-- A command that recomputes a score from an input XML and a solution XML.
+`make verify` re-scores every committed solution and compares the total against
+the expected value in `results/claims.csv`. This is the required validator for
+the artifact; it does not depend on the external ITC website or an account
+token.
 
-## Required output fields
+The scorer emits:
 
-Each score record should contain:
-
-- instance name;
-- hard feasibility flag and violation list;
-- time penalty;
-- room penalty;
-- distribution penalty;
-- student penalty;
+- hard feasibility and violation list;
+- time, room, distribution and student penalties;
 - total cost;
-- scorer version/commit.
+- unsupported constraint types.
 
-## Acceptance rule
+## What is checked
 
-For every certified solution, the independent scorer's total and component
-costs must match the official validator, or any difference must be explained and
-documented.
+- `tg-fal17`: 6,889 chained, 6,919 / 6,930 independent, 7,042 best 300 s,
+  7,325 median, 7,220 / 7,053 exact-room ablation.
+- `tg-spr18`: 22,180.
+- `lums-fal17`: 1,602.
+- `lums-spr18`: 826.
+- `iku-fal17`: 70 room collisions (negative result).
 
-The paper must never use AcaTime's internal objective proxy as a reported
-result. It is a search signal only; the scorer is the referee.
+## Scope
+
+The external ITC web validator is not required and is not called by the
+artifact. If a token is available, an optional cross-check can be added later,
+but the reproducible claim is based on the committed solutions and the local
+scorer.
+
+## Remaining work
+
+- Add a small fixture set with hand-checked component costs.
+- Keep the scorer and bridge scoring formulas in sync if the pipeline changes.

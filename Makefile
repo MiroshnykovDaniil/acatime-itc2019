@@ -1,4 +1,4 @@
-.PHONY: help data check-data build test verify smoke
+.PHONY: help data check-data build test verify smoke docker-build docker-verify
 
 help:
 	@echo "Targets:"
@@ -8,6 +8,8 @@ help:
 	@echo "  test        Run the .NET unit tests"
 	@echo "  verify      Re-score all curated solutions and regenerate results/summary.csv"
 	@echo "  smoke       Run only the 6,889 verification check"
+	@echo "  docker-build  Build the artifact container"
+	@echo "  docker-verify Run the container verification (downloads data, re-scores)"
 
 data:
 	./data/download.sh
@@ -26,3 +28,9 @@ verify:
 
 smoke:
 	python3 scripts/verify_results.py --smoke
+
+docker-build:
+	docker build -t acatime-itc2019:local .
+
+docker-verify:
+	docker run --rm acatime-itc2019:local

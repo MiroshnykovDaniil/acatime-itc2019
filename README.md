@@ -102,6 +102,24 @@ Requirements:
   are standard-library only).
 
 
+## Docker
+
+Build and verify without installing .NET or Python locally:
+
+```bash
+make docker-build
+make docker-verify
+```
+
+The image builds the .NET solution, runs the unit tests, downloads the DTU
+instances, and re-scores every curated solution. The default container command
+is the same as `make verify`. To use an existing local data directory instead of
+downloading again:
+
+```bash
+docker run --rm -v "$PWD/data:/artifact/data" acatime-itc2019:local
+```
+
 ## Licensing
 
 - Code: Apache-2.0 (see `LICENSE`).

@@ -1,0 +1,15 @@
+.git
+.gitignore
+.gitattributes
+**/.git
+**/bin
+**/obj
+**/__pycache__
+**/*.pyc
+**/.DS_Store
+**/.idea
+**/.vs
+data/*.xml
+*.pdf
+*.zip
+*.tmp

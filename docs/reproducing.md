@@ -50,6 +50,20 @@ per-run seed list still need to be imported into `experiments/`; until then,
 the artifact verifies the scores of the committed solutions, not a fresh GA
 replay.
 
+## Docker
+
+```bash
+make docker-build
+make docker-verify
+```
+
+The Docker build stage runs `dotnet test`; the runtime stage downloads the DTU
+instances and runs `scripts/verify_results.py`. To mount existing data:
+
+```bash
+docker run --rm -v "$PWD/data:/artifact/data" acatime-itc2019:local
+```
+
 ## Claim verification
 
 `docs/claims.md` maps the paper claims to result paths. `make verify` checks the

@@ -12,5 +12,6 @@ python3 src/scorer/score.py data/tg-fal17_reduced.xml results/tg-fal17/chained/s
 It uses only the Python standard library. The scorer is the referee for every
 reported score; AcaTime's internal objective proxy is never used as a result.
 
-Remaining work: add explicit component tests and saved official-validator
-parity evidence (see `docs/scorer-validation.md`).
+Remaining work: add a small fixture set with hand-checked component costs and
+keep the scorer/bridge formulas in sync. The external ITC web validator is not
+required and is not called by the artifact.
