@@ -1,0 +1,3 @@
+# Python dependencies for the optional local-search/room pipeline.
+# The independent scorer and scripts/verify_results.py use only the standard library.
+numpy==2.4.6

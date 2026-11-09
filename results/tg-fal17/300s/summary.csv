@@ -1,0 +1,6 @@
+run,feasible,hard_violations,total,time,room,distribution,student
+r2,True,0,7042,2700,102,77,0
+r1,True,0,7279,2684,151,88,0
+r3,True,0,7325,2732,101,88,0
+r4,True,0,7386,2732,122,90,0
+r5,True,0,7397,2732,173,88,0

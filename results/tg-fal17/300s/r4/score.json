@@ -1,0 +1,26 @@
+{
+ "feasible": true,
+ "violations": [],
+ "n_violations": 0,
+ "hard_violations": 0,
+ "cost": {
+  "time": 2732,
+  "room": 122,
+  "distribution": 90,
+  "student": 0,
+  "weights": {
+   "time": 2,
+   "room": 1,
+   "distribution": 20,
+   "student": 0
+  },
+  "total": 7386
+ },
+ "soft_violation_counts": {
+  "SameAttendees": 3,
+  "SameDays": 78,
+  "WorkDay": 0,
+  "DifferentDays": 0
+ },
+ "unsupported_types": []
+}

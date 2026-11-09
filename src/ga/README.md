@@ -1,12 +1,14 @@
 # GA module
 
-Planned source:
+Imported from `AcaTime.Common` at commit `8669726`:
 
-- `AcaTime.Common/AcaTime.Algorithm.Genetic`
-- `AcaTime.Common/AcaTime.Algorithm.Default` (required project reference)
-- `AcaTime.Common/AcaTime.ScheduleCommon`
-- `AcaTime.Common/AcaTime.ScriptModels`
+- `AcaTime.Algorithm.Genetic`;
+- `AcaTime.Algorithm.Default` (required project reference);
+- `AcaTime.ScheduleCommon`;
+- `AcaTime.ScriptModels`;
+- `AcaTime.Algorithm.Genetic.Tests` (3 unit tests, all passing).
 
-Import the exact code used for the paper, including the opt-in ITC adapter.
-Do not change production defaults. Document the GA parameters, time budget,
-seeds and any run-to-run stochastic behavior.
+The production defaults are unchanged. The ITC adapter is opt-in and is
+activated by the runner parameters (`Adapter=itc ExtraItcOperators=3`, etc.).
+The build includes the original source warnings; they are not treated as
+errors.

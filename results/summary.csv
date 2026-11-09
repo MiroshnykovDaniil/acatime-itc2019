@@ -1,1 +1,10 @@
 instance,variant,status,budget_s,total_cost,time_cost,room_cost,distribution_cost,student_cost,seed,config,solution_file,score_file
+tg-fal17,tg-fal17-chained,verified,900,6889,2684,121,70,0,,results/tg-fal17/chained/run-genetic-20261102-143047.json,results/tg-fal17/chained/sol.json,results/tg-fal17/chained/score.json
+tg-fal17,tg-fal17-ind-a,verified,600,6919,2684,151,70,0,,results/tg-fal17/independent-600-a/run-genetic-20261102-144530.json,results/tg-fal17/independent-600-a/sol.json,results/tg-fal17/independent-600-a/score.json
+tg-fal17,tg-fal17-ind-b,verified,600,6930,2684,162,70,0,,results/tg-fal17/independent-600-b/run-genetic-20261102-141916.json,results/tg-fal17/independent-600-b/sol.json,results/tg-fal17/independent-600-b/score.json
+tg-fal17,tg-fal17-best-300,verified,300,7042,2700,102,77,0,,results/tg-fal17/best-300/run-genetic-20261102-130517.json,results/tg-fal17/best-300/sol.json,results/tg-fal17/best-300/score.json
+tg-spr18,tg-spr18-certified,verified,600,22180,750,460,1011,0,,results/tg-spr18/raw/run-feedback.json,results/tg-spr18/certified/sol.json,results/tg-spr18/certified/score.json
+lums-fal17,lums-fal17-seed,verified,,1602,300,517,97,0,,,results/lums-fal17/sol-seed-1602.json,results/lums-fal17/score-seed-1602.json
+lums-spr18,lums-spr18-seed,verified,,826,72,387,59,0,,,results/lums-spr18/sol-seed-826.json,results/lums-spr18/score-seed-826.json
+tg-fal17,tg-fal17-exact-600,verified,600,7220,2684,92,88,0,,results/tg-fal17/exact-ablation/exact-600/run-genetic-20261102-150252.json,results/tg-fal17/exact-ablation/exact-600/sol.json,results/tg-fal17/exact-ablation/exact-600/score.json
+tg-fal17,tg-fal17-exact-600b,verified,600,7053,2636,161,81,0,,results/tg-fal17/exact-ablation/exact-600b/run-genetic-20261102-151727.json,results/tg-fal17/exact-ablation/exact-600b/sol.json,results/tg-fal17/exact-ablation/exact-600b/score.json

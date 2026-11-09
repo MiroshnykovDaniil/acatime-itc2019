@@ -4,9 +4,24 @@ This repository is the public artifact for the paper:
 
 > **Bridging AcaTime and ITC 2019: Certified Multi-Instance Results for a General Timetabling GA**
 
-**Status:** initial scaffold (2026-11-09). Code and curated result files are being imported. The manuscript is intentionally **not** included here; the paper DOI/citation will be added after submission.
+**Status:** code imported and verified against the certified result files (2026-11-09). The manuscript is intentionally **not** included here; the paper DOI/citation will be added after submission.
 
 The artifact is being prepared for the IT&I(s)-2026 short paper and the follow-up journal paper. It is not yet archived with a DOI.
+
+## Current verification
+
+```bash
+make check-data   # SHA-256 of the five DTU instances
+make build        # .NET solution build
+make test         # .NET unit tests
+make verify       # re-score the curated solutions
+```
+
+`make verify` currently checks the 6,889 chained result, the 6,919 / 6,930
+independent runs, the 7,042 best / 7,325 median 300 s runs, the 22,180
+`tg-spr18` result, the 1,602 / 826 LUMS seeds, the 7,220 / 7,053 exact-room
+ablation, and the 70-collision `iku-fal17` negative result.
+
 
 ## What the paper claims
 
@@ -33,7 +48,10 @@ The ITC 2019 comparison is the neutral external check: AcaTime is within the fin
 
 ```text
 data/            ITC 2019 reduced-instance provenance, download script and checksums
-src/             GA, bridge, scorer and runner source (import in progress)
+src/ga/          exact AcaTime GA projects (GA, Default, ScheduleCommon, ScriptModels)
+src/runner/      local ITC runner
+src/bridge/tools/ Python conversion, post-processing and scoring pipeline
+src/scorer/      scorer entry point (score.py)
 experiments/     run configurations, seeds and budgets
 results/         certified solutions, scores, logs and summary tables
 docs/            bridge semantics, data provenance, limitations, claims
@@ -61,15 +79,28 @@ The data is stored outside Git history by default; the download script fetches t
 
 ## Reproduction
 
-The full reproduction commands will be added with the code import. Planned entry points:
+The code and the curated certified results are in the repository. From a fresh
+checkout:
 
 ```bash
-make build
-make smoke       # small verification run
-make verify      # recompute scorer results from curated solutions
+./data/download.sh       # fetch and verify the DTU reduced instances
+make build               # dotnet build src/AcaTime.ItcArtifact.sln -c Release
+make test                # dotnet unit tests
+make verify              # re-score every curated solution
 ```
 
-Requirements and expected runtimes will be documented in [`docs/reproducing.md`](docs/reproducing.md).
+`make smoke` runs the single 6,889 check. The full verification is fast because
+it only re-runs the scorer; it does not re-run the GA. Full experiment
+reproduction requires the runner and the configurations to be completed in
+[`experiments/`](experiments/README.md) and [`docs/reproducing.md`](docs/reproducing.md).
+
+Requirements:
+
+- .NET SDK 9 (`global.json`);
+- Python 3.10+;
+- `numpy` for the optional local-search/room pipeline (the scorer and verifier
+  are standard-library only).
+
 
 ## Licensing
 

@@ -1,0 +1,36 @@
+{
+ "feasible": false,
+ "violations": [
+  [
+   "room-collision",
+   "room 13 double-booked week 13 day 0: classes 17 & 582"
+  ],
+  [
+   "room-collision",
+   "room 20 double-booked week 15 day 1: classes 95 & 204"
+  ]
+ ],
+ "n_violations": 2,
+ "hard_violations": 0,
+ "cost": {
+  "time": 730,
+  "room": 370,
+  "distribution": 1703,
+  "student": 0,
+  "weights": {
+   "time": 2,
+   "room": 1,
+   "distribution": 20,
+   "student": 0
+  },
+  "total": 35890
+ },
+ "soft_violation_counts": {
+  "MaxDayLoad": 11,
+  "SameDays": 171,
+  "SameTime": 118,
+  "Precedence": 0,
+  "SameRoom": 263
+ },
+ "unsupported_types": []
+}

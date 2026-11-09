@@ -1,0 +1,23 @@
+{
+ "feasible": true,
+ "violations": [],
+ "n_violations": 0,
+ "hard_violations": 0,
+ "cost": {
+  "time": 300,
+  "room": 517,
+  "distribution": 97,
+  "student": 0,
+  "weights": {
+   "time": 2,
+   "room": 1,
+   "distribution": 5,
+   "student": 0
+  },
+  "total": 1602
+ },
+ "soft_violation_counts": {
+  "NotOverlap": 58
+ },
+ "unsupported_types": []
+}

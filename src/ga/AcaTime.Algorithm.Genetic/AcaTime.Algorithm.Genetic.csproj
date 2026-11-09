@@ -1,0 +1,30 @@
+﻿<!--<Project Sdk="Microsoft.NET.Sdk">-->
+
+<!--    <PropertyGroup>-->
+<!--        <OutputType>Exe</OutputType>-->
+<!--        <TargetFramework>net8.0</TargetFramework>-->
+<!--        <ImplicitUsings>enable</ImplicitUsings>-->
+<!--        <Nullable>enable</Nullable>-->
+<!--    </PropertyGroup>-->
+
+<!--</Project>-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+
+<PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>AcaTime.Algorithm.Genetic</RootNamespace>
+</PropertyGroup>
+
+<ItemGroup>
+    <ProjectReference Include="..\AcaTime.Algorithm.Default\AcaTime.Algorithm.Default.csproj" />
+    <ProjectReference Include="..\AcaTime.ScheduleCommon\AcaTime.ScheduleCommon.csproj" />
+<!-- todo прибрати коли вийде згенерувати популяцію іншим чином-->
+<!--    <ProjectReference Include="..\AcaTime.Algorithm.Default\AcaTime.Algorithm.Default.csproj" />-->
+
+</ItemGroup>
+
+
+</Project>

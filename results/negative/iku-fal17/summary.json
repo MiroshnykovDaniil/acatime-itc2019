@@ -1,0 +1,117 @@
+{
+ "instance": "iku-fal17",
+ "classes": 2641,
+ "meetings_total": 37044,
+ "rooms": 214,
+ "roomless": 246,
+ "time_candidates": 84100,
+ "distinct_starts": [
+  108,
+  114,
+  120,
+  126,
+  132,
+  138,
+  144,
+  150,
+  156,
+  162,
+  168,
+  174,
+  180,
+  186,
+  192,
+  198,
+  204,
+  210,
+  216,
+  222,
+  228,
+  234,
+  240,
+  246,
+  252,
+  258,
+  264
+ ],
+ "weights": {
+  "time": 1,
+  "room": 1,
+  "distribution": 30,
+  "student": 0
+ },
+ "distributions_by": [
+  [
+   "DifferentDaysHARD",
+   2
+  ],
+  [
+   "NotOverlapsoft",
+   1
+  ],
+  [
+   "NotOverlapHARD",
+   475
+  ],
+  [
+   "OverlapHARD",
+   9
+  ],
+  [
+   "Precedencesoft",
+   590
+  ],
+  [
+   "PrecedenceHARD",
+   27
+  ],
+  [
+   "SameAttendeessoft",
+   1
+  ],
+  [
+   "SameAttendeesHARD",
+   1099
+  ],
+  [
+   "SameDayssoft",
+   9
+  ],
+  [
+   "SameDaysHARD",
+   159
+  ],
+  [
+   "SameRoomsoft",
+   8
+  ],
+  [
+   "SameRoomHARD",
+   102
+  ],
+  [
+   "SameStartsoft",
+   1
+  ],
+  [
+   "SameTimeHARD",
+   18
+  ],
+  [
+   "WorkDaysoft",
+   8
+  ],
+  [
+   "WorkDayHARD",
+   149
+  ]
+ ],
+ "pairs": {
+  "soft": 1070,
+  "hard": 23229
+ },
+ "unknown_soft_est_types": [
+  9
+ ],
+ "students": 0
+}

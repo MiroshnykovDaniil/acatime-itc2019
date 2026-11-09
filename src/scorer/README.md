@@ -1,15 +1,16 @@
 # Scorer module
 
-Planned source:
+Imported from `itc2019-benchmark/tools/score.py`.
 
-- `itc2019-benchmark/tools/score.py` — independent ITC 2019 scorer.
+Usage:
 
-Required additions:
+```bash
+python3 src/scorer/score.py data/tg-fal17_reduced.xml results/tg-fal17/chained/sol.json
+python3 src/scorer/score.py data/tg-fal17_reduced.xml results/tg-fal17/chained/sol.json --emit-xml /tmp/solution.xml
+```
 
-- tests for every cost component;
-- parity checks against the official ITC 2019 validator;
-- saved official validator outputs or logs;
-- a command that prints component costs and total cost.
+It uses only the Python standard library. The scorer is the referee for every
+reported score; AcaTime's internal objective proxy is never used as a result.
 
-See `docs/scorer-validation.md`. The scorer is the referee; AcaTime's internal
-objective proxy is never a reported result.
+Remaining work: add explicit component tests and saved official-validator
+parity evidence (see `docs/scorer-validation.md`).

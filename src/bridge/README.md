@@ -1,11 +1,15 @@
 # Bridge module
 
-Planned source:
+Imported from `itc2019-benchmark/tools`:
 
-- `itc2019-benchmark/tools/convert.py` — ITC XML → AcaTime input;
-- `itc2019-benchmark/tools/scripts_gen.py` — generated rule/constraint scripts;
-- `itc2019-benchmark/tools/post.py` — candidate pinning and room consolidation;
-- `itc2019-benchmark/tools/run_from_solution.py` — scored solution → runner seed.
+- `convert.py` — ITC XML → AcaTime input;
+- `scripts_gen.py` — generated rule/constraint scripts;
+- `post.py` — candidate pinning and room consolidation;
+- `run_from_solution.py` — scored solution → runner seed;
+- the local-search and room-search scripts used by the experimental pipeline.
 
-The bridge must be accompanied by mapping documentation and round-trip tests.
-See `docs/bridge.md`.
+The scorer itself lives at `src/scorer/score.py` (a link to
+`bridge/tools/score.py` for compatibility with the pipeline imports).
+
+See `docs/bridge.md` for the mapping and its conservative deviations. The
+Python pipeline requires `numpy`; the scorer and verifier do not.

@@ -1,35 +1,39 @@
 # Claim-to-artifact map
 
-This file maps every quantitative claim in the paper to the artifact that will
-verify it. Paths under `results/` are the intended curated locations; the
-result import is still in progress.
+This file maps every quantitative claim in the paper to the artifact that
+verifies it. `make verify` runs the independent scorer over the imported
+solutions and regenerates `results/summary.csv`.
 
-Status: `planned` means the file/command is not yet in this repository.
+Status meanings:
+
+- **verified** — score recomputed from the committed solution and matches;
+- **imported** — files are present but a human-readable note is the evidence;
+- **planned** — not yet imported.
 
 ## Certified results
 
 | Claim | Value | Budget | Artifact | Status |
 |---|---:|---|---|---|
-| `tg-fal17` best chained | **6,889** | 600 + 300 s | `results/tg-fal17/chained/solution.xml`, `score.json` | planned |
-| `tg-fal17` independent run A | **6,919** | 600 s | `results/tg-fal17/independent-a/` | planned |
-| `tg-fal17` independent run B | **6,930** | 600 s | `results/tg-fal17/independent-b/` | planned |
-| `tg-fal17` best 300 s | 7,042 | 300 s | `results/tg-fal17/best-300/` | planned |
-| `tg-fal17` 300 s median | 7,325 | 300 s | `results/tg-fal17/summary.csv` | planned |
-| `tg-spr18` certified | **22,180** | 600 s + roomopt | `results/tg-spr18/solution.xml`, `score.json` | planned |
-| `lums-fal17` certified seed | **1,602** | local search seed | `results/lums-fal17/solution.xml`, `score.json` | planned |
-| `lums-spr18` certified seed | **826** | local search seed | `results/lums-spr18/solution.xml`, `score.json` | planned |
+| `tg-fal17` best chained | **6,889** | 600 + 300 s | `results/tg-fal17/chained/` | verified |
+| `tg-fal17` independent run A | **6,919** | 600 s | `results/tg-fal17/independent-600-a/` | verified |
+| `tg-fal17` independent run B | **6,930** | 600 s | `results/tg-fal17/independent-600-b/` | verified |
+| `tg-fal17` best 300 s | 7,042 | 300 s | `results/tg-fal17/best-300/` | verified |
+| `tg-fal17` 300 s median | 7,325 | 300 s | `results/tg-fal17/300s/summary.csv` | verified |
+| `tg-spr18` certified | **22,180** | 600 s + roomopt | `results/tg-spr18/certified/` | verified |
+| `lums-fal17` certified seed | **1,602** | local search seed | `results/lums-fal17/` | verified |
+| `lums-spr18` certified seed | **826** | local search seed | `results/lums-spr18/` | verified |
 
 ## Ablations and negative results
 
 | Claim | Value | Artifact | Status |
 |---|---:|---|---|
-| Exact one-room-per-class, 600 s | 7,053 / 7,220 | `results/tg-fal17/exact-room-ablation/` | planned |
+| Exact one-room-per-class, 600 s | 7,220 / 7,053 | `results/tg-fal17/exact-ablation/` | verified |
 | Initial LNS solution | 7,800 | `results/tg-fal17/initial-lns/` | planned |
 | Old non-room-aware + repair headline | 7,310 | `results/negative/tg-fal17-old-7310/` | planned |
 | Old repair distribution: median | 7,925 | `results/negative/tg-fal17-old-7310/summary.csv` | planned |
 | Old repair distribution: beat 7,800 | 31.4% | `results/negative/tg-fal17-old-7310/summary.csv` | planned |
-| `tg-spr18` initial solution | 23,148 | `results/tg-spr18/initial/` | planned |
-| `iku-fal17` room collisions | 70 | `results/negative/iku-fal17/` | planned |
+| `tg-spr18` initial solution | 23,148 | `results/tg-spr18/raw/` | planned |
+| `iku-fal17` room collisions | 70 | `results/negative/iku-fal17/STATUS.md` | imported |
 | `iku-spr18` | untried | — | n/a |
 
 ## Reference values
@@ -63,3 +67,11 @@ Every row marked `planned` must eventually have:
 4. the solution file;
 5. the scorer output;
 6. the expected value in a machine-readable summary.
+
+Run:
+
+```bash
+make verify
+```
+
+The resulting table is `results/summary.csv`.
