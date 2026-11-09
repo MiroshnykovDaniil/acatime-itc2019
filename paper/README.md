@@ -7,6 +7,9 @@
 The manuscript is intentionally **not included** in this repository. It will be
 added only after submission, and only if the venue's policy allows it.
 
+**Artifact DOI (v0.1.0):** [10.5281/zenodo.24083720](https://doi.org/10.5281/zenodo.24083720)  
+**Concept DOI:** [10.5281/zenodo.24083719](https://doi.org/10.5281/zenodo.24083719)
+
 When the paper is submitted/published:
 
 1. add its DOI as a related identifier in Zenodo;

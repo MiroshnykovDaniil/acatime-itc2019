@@ -1,8 +1,13 @@
 # AcaTime × ITC 2019 — reproducibility artifact
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24083720.svg)](https://doi.org/10.5281/zenodo.24083720)
+
 This repository is the public artifact for the paper:
 
 > **Bridging AcaTime and ITC 2019: Certified Multi-Instance Results for a General Timetabling GA**
+
+**Archived version:** `v0.1.0` — DOI [10.5281/zenodo.24083720](https://doi.org/10.5281/zenodo.24083720)  
+**Concept DOI (all versions):** [10.5281/zenodo.24083719](https://doi.org/10.5281/zenodo.24083719)
 
 **Status:** code imported and verified against the certified result files (2026-11-09). The manuscript is intentionally **not** included here; the paper DOI/citation will be added after submission.
 

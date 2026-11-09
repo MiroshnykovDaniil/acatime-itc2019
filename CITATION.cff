@@ -9,6 +9,9 @@ type: software
 version: 0.1.0
 date-released: 2026-11-09
 license: Apache-2.0
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24083720
 repository-code: "https://github.com/MiroshnykovDaniil/acatime-itc2019"
 url: "https://github.com/MiroshnykovDaniil/acatime-itc2019"
 keywords:
