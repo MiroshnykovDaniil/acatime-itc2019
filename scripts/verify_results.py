@@ -143,12 +143,14 @@ def main() -> int:
         if not ok:
             failures.append(claim)
 
-    with SUMMARY.open("w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=SUMMARY_FIELDS, lineterminator="\n")
-        writer.writeheader()
-        writer.writerows(summary_rows)
-
-    print(f"\nwrote {SUMMARY.relative_to(ROOT)} ({len(summary_rows)} scored rows)")
+    if args.smoke:
+        print("\nsmoke mode: results/summary.csv not rewritten")
+    else:
+        with SUMMARY.open("w", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=SUMMARY_FIELDS, lineterminator="\n")
+            writer.writeheader()
+            writer.writerows(summary_rows)
+        print(f"\nwrote {SUMMARY.relative_to(ROOT)} ({len(summary_rows)} scored rows)")
     if failures:
         print("FAILED:", ", ".join(failures))
         return 1
